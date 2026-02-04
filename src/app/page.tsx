@@ -1,66 +1,99 @@
+import Header from "./components/Header";
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
+      <Header />
+      {/* Hero Section - Full screen image with text overlay */}
+      <section className={styles.hero}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+          src="/images/hero-img.jpg"
+          alt="Hero Image"
+          fill
+          style={{ objectFit: 'cover' }}
         />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className={styles.heroContent}>
+          <div className={styles.heroText}>
+            <hr /><p>EST. 1908 YOKOHAMA</p><hr />
+          </div>
+          <Image
+            src="/vertical-logo.svg"
+            alt="Logo"
+            width={450}
+            height={200}
+          />
+          <h1 className={styles.heroTitle}>Welcome to Our Site</h1>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className={styles.philosophy}>
+        <div className={styles.philosophyLeft}>
+          <div className={styles.verticalTextWrapper}>
+            <div className={styles.verticalText}>
+              一皿に込めた、<br />
+              一期一会の物語。
+            </div>
+            <div className={styles.verticalDivider}></div>
+            <div className={styles.verticalText}>
+              横浜の港が見守る<br />
+              西洋館で刻む時。
+            </div>
+          </div>
         </div>
-      </main>
+
+        <div className={styles.philosophyRight}>
+          <div className={styles.philosophyContent}>
+            <span className={styles.philosophyLabel}>Our Philosophy</span>
+            <h2 className={styles.philosophyTitle}>
+              Omotenashi &amp;<br />Gastronomy
+            </h2>
+            <p className={styles.philosophyText}>
+              1908年の横浜の精神を体験してください。本格的なフランス料理と日本の「おもてなし」の温かさが融合した時を超えた調和。歴史ある洋館の中で、一世紀にわたって湾を見守ってきた空間をお楽しみください。
+            </p>
+          </div>
+
+          <div className={styles.featureGrid}>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <Image src="/icons/heritage.svg" alt="Heritage Icon" width={24} height={24} />
+              </div>
+              <div className={styles.featureContent}>
+                <h3>Heritage</h3>
+                <p>
+                  A designated cultural property preserving the colonial architecture of the Meiji era.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <Image src="/icons/cuisine.svg" alt="Cuisine Icon" width={24} height={24} />
+              </div>
+              <div className={styles.featureContent}>
+                <h3>Cuisine</h3>
+                <p>
+                  Classic French techniques meet the finest locally sourced seasonal ingredients.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <Image src="/icons/heart.svg" alt="Heart Icon" width={24} height={24} />
+              </div>
+              <div className={styles.featureContent}>
+                <h3>Omotenashi</h3>
+                <p>
+                  Wholehearted service that anticipates your needs before they are spoken.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
