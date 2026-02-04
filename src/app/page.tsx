@@ -24,7 +24,7 @@ export default function Home() {
             width={450}
             height={200}
           />
-          <h1 className={styles.heroTitle}>Welcome to Our Site</h1>
+          <h1 className={styles.heroTitle}>時を超えた、和と洋の融合</h1>
         </div>
       </section>
 
@@ -63,7 +63,7 @@ export default function Home() {
               <div className={styles.featureContent}>
                 <h3>Heritage</h3>
                 <p>
-                  A designated cultural property preserving the colonial architecture of the Meiji era.
+                  明治時代の植民地建築を保存する指定文化財。
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function Home() {
               <div className={styles.featureContent}>
                 <h3>Cuisine</h3>
                 <p>
-                  Classic French techniques meet the finest locally sourced seasonal ingredients.
+                  最高の地元産季節食材と出会うクラシックなフランス料理技法。
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function Home() {
               <div className={styles.featureContent}>
                 <h3>Omotenashi</h3>
                 <p>
-                  Wholehearted service that anticipates your needs before they are spoken.
+                  日本の伝統的なおもてなしの心で、温かく心地よい体験を。
                 </p>
               </div>
             </div>

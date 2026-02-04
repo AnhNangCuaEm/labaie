@@ -23,11 +23,21 @@
       .logo {
         filter: invert(1);
       }
+
+      .reserveButton {
+        color: black;
+      }
+  }
+
+  &:has(.navLink:hover) .navLink:not(:hover),
+  &:has(.navLink:hover) .reserveButton,
+  &:has(.reserveButton:hover) .nav {
+    opacity: 0.4;
   }
 }
 
 .nav {
-  // Add nav styles if needed
+  transition: opacity 0.3s;
 }
 
 .navList {
@@ -37,23 +47,54 @@
 }
 
 .navLink {
-    transition: color 0.3s;
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s;
 
-  &:hover {
-    color: rgba(249, 204, 91, 0.653);
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 80%;
+    height: 2px;
+    background-color: rgba(224, 184, 82, 0.9);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease-out;
+  }
+
+  &:hover::after {
+    transform: translateX(-50%) scaleX(1);
   }
 }
 
 .reserveButton {
-  background-color: rgb(251, 191, 36);
+  position: relative;
+  background: transparent;
+  padding-bottom: 4px;
   color: white;
+  font-size: 1.1rem;
   font-weight: bold;
-  padding: 0.5rem 2rem;
-  border-radius: 0.25rem;
   border: none;
   cursor: pointer;
+  transition: opacity 0.3s;
+  overflow: hidden;
 
-  &:hover {
-    background-color: rgb(245, 158, 11);
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 80%;
+    height: 2px;
+    background-color: rgba(224, 184, 82, 0.9);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease-out;
+  }
+
+  &:hover::after {
+    transform: translateX(-50%) scaleX(1);
   }
 }

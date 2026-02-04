@@ -30,7 +30,7 @@
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
 
@@ -50,8 +50,8 @@
 }
 
 .heroTitle {
-  font-size: 2.25rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: medium;
   color: white;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .philosophyLabel {
-  font-family: var(--font-display);
+  font-family: var(--font-geist-sans);
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.1em;

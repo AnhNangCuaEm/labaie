@@ -6,6 +6,7 @@ import styles from "./header.module.scss";
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isHovering, setIsHovering] = useState(false);
 
     useEffect(() => {
         const checkScroll = () => {
@@ -37,7 +38,12 @@ export default function Header() {
                     <li><a href="#" className={styles.navLink}>Access</a></li>
                 </ul>
             </nav>
-            <button className={styles.reserveButton}>
+            <button 
+                className={styles.reserveButton}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                style={{ opacity: isHovering ? 1 : undefined }}
+            >
                 Reservation
             </button>
         </header>
