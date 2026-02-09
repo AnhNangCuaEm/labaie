@@ -94,6 +94,141 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Occasions Section */}
+      <section className={styles.occasions}>
+        <div className={styles.occasionsHeader}>
+          <span className={styles.occasionsLabel}>Occasions</span>
+            <h2 className={styles.occasionsTitle}>大切なひとときを</h2>
+        </div>
+
+        <div className={styles.accordionContainer}>
+          {/* Business */}
+          <div className={styles.accordionItem}>
+            <div
+              className={styles.accordionImage}
+              style={{ backgroundImage: "url('/images/accordion/business.png')" }}
+            />
+            <div className={styles.accordionOverlay} />
+            <div className={styles.accordionInner}>
+              <div className={styles.accordionLabel}>
+                <span className={styles.verticalText}>Business</span>
+                <span className={styles.mobileTitle}>Business</span>
+              </div>
+              <div className={styles.accordionContent}>
+                <h4>Business</h4>
+                <p className={styles.subtitle}>接待</p>
+                <p className={styles.description}>
+                  洗練されたプライベートルームで、成功へ導く細やかなサービスでゲストを魅了。
+                </p>
+                <button className={styles.viewButton}>
+                  View Plan <span className={styles.arrow}>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Family */}
+          <div className={styles.accordionItem}>
+            <div
+              className={styles.accordionImage}
+              style={{ backgroundImage: "url('/images/accordion/family.jpg')" }}
+            />
+            <div className={styles.accordionOverlay} />
+            <div className={styles.accordionInner}>
+              <div className={styles.accordionLabel}>
+                <span className={styles.verticalText}>Family</span>
+                <span className={styles.mobileTitle}>Family</span>
+              </div>
+              <div className={styles.accordionContent}>
+                <h4>Family</h4>
+                <p className={styles.subtitle}>家族のお祝い</p>
+                <p className={styles.description}>
+                  温かく心地よい雰囲気の中で、世代を超えた家族との思い出を刻む。
+                </p>
+                <button className={styles.viewButton}>
+                  View Plan <span className={styles.arrow}>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Wedding */}
+          <div className={styles.accordionItem}>
+            <div
+              className={styles.accordionImage}
+              style={{ backgroundImage: "url('/images/accordion/wedding.png')" }}
+            />
+            <div className={styles.accordionOverlay} />
+            <div className={styles.accordionInner}>
+              <div className={styles.accordionLabel}>
+                <span className={styles.verticalText}>Wedding</span>
+                <span className={styles.mobileTitle}>Wedding</span>
+              </div>
+              <div className={styles.accordionContent}>
+                <h4>Wedding</h4>
+                <p className={styles.subtitle}>ウェディング</p>
+                <p className={styles.description}>
+                  歴史ある館での夢のような始まり。特別な日のための独占的なブライダルプラン。
+                </p>
+                <button className={styles.viewButton}>
+                  View Plan <span className={styles.arrow}>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Anniversary */}
+          <div className={styles.accordionItem}>
+            <div
+              className={styles.accordionImage}
+              style={{ backgroundImage: "url('/images/accordion/anniversary.png')" }}
+            />
+            <div className={styles.accordionOverlay} />
+            <div className={styles.accordionInner}>
+              <div className={styles.accordionLabel}>
+                <span className={styles.verticalText}>Anniversary</span>
+                <span className={styles.mobileTitle}>Anniversary</span>
+              </div>
+              <div className={styles.accordionContent}>
+                <h4>Anniversary</h4>
+                <p className={styles.subtitle}>記念日</p>
+                <p className={styles.description}>
+                  愛を祝う特別な席で、オリジナルケーキとシャンパンで素敵な時間をお過ごしください。
+                </p>
+                <button className={styles.viewButton}>
+                  View Plan <span className={styles.arrow}>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Party */}
+          <div className={styles.accordionItem}>
+            <div
+              className={styles.accordionImage}
+              style={{ backgroundImage: "url('/images/accordion/party.png')" }}
+            />
+            <div className={styles.accordionOverlay} />
+            <div className={styles.accordionInner}>
+              <div className={styles.accordionLabel}>
+                <span className={styles.verticalText}>Party</span>
+                <span className={styles.mobileTitle}>Party</span>
+              </div>
+              <div className={styles.accordionContent}>
+                <h4>Party</h4>
+                <p className={styles.subtitle}>パーティー</p>
+                <p className={styles.description}>
+                  大規模なグループ向けの広大なバンケットホール、カスタマイズされたコースメニュー付き。
+                </p>
+                <button className={styles.viewButton}>
+                  View Plan <span className={styles.arrow}>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
