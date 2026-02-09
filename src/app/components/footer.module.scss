@@ -1,0 +1,185 @@
+.footer {
+  background-color: #1a1d2e;
+  width: 100%;
+  padding: 4rem 1.5rem;
+  color: white;
+
+  .container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 3rem;
+
+    @media (min-width: 768px) {
+      gap: 4rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  // Brand Section
+  .brand {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    gap: 1.2rem;
+
+    .icon {
+      color: var(--primary, #c9a961);
+      font-size: 1.875rem;
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  // Reservations Section
+  .reservations {
+    h3 {
+      margin-bottom: 1.5rem;
+      font-family: var(--font-display, serif);
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: var(--primary, #c9a961);
+    }
+
+    .callLabel {
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .phone {
+      display: block;
+      font-family: var(--font-display, serif);
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      color: white;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--primary, #c9a961);
+      }
+    }
+
+    .hours {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .bookingBtn {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid rgba(201, 169, 97, 0.5);
+      border-radius: 0.25rem;
+      background: transparent;
+      font-size: 0.875rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary, #c9a961);
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: var(--primary, #c9a961);
+        color: var(--navy, #1a1d2e);
+      }
+    }
+  }
+
+  // Hours Section
+  .hoursSection {
+    h3 {
+      margin-bottom: 1.5rem;
+      font-family: var(--font-display, serif);
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: var(--primary, #c9a961);
+    }
+
+    .hoursList {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.8);
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.8rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &:not(:last-child) {
+          margin-bottom: 0.75rem;
+        }
+
+        &.closed {
+          padding-top: 0.5rem;
+          border: none;
+          color: rgba(255, 255, 255, 0.6);
+
+          .label {
+            display: block;
+            font-weight: bold;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  // Links Section
+  .links {
+    h3 {
+      margin-bottom: 1.5rem;
+      font-family: var(--font-display, serif);
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: var(--primary, #c9a961);
+    }
+
+    ul {
+      font-size: 0.875rem;
+      list-style: none;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 0.75rem;
+        }
+
+        a {
+          color: rgba(255, 255, 255, 0.6);
+          transition: all 0.3s;
+
+          &:hover {
+            color: var(--primary, #c9a961);
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Copyright
+  .copyright {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}

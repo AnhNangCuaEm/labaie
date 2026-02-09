@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Image from "next/image";
 import styles from "./page.module.scss";
 
@@ -229,6 +230,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      
+      <Footer />
     </div>
   );
 }
