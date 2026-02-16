@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
+import SmoothScroll from "./components/SmoothScroll";
+import Header from "./components/Header";
 import "./globals.css";
 
 const notoSans = Noto_Sans_JP({
@@ -27,7 +29,10 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${notoSans.variable} ${notoSerif.variable}`}>
-        {children}
+        <Header />
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

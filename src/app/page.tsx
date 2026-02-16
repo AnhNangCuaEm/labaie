@@ -1,12 +1,12 @@
-import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollAnimations from "./components/ScrollAnimations";
 import Image from "next/image";
 import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Header />
+      <ScrollAnimations />
       {/* Hero Section - Full screen image with text overlay */}
       <section className={styles.hero}>
         <Image
@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Philosophy Section */}
       <section className={styles.philosophy}>
-        <div className={styles.philosophyLeft}>
+        <div className={styles.philosophyLeft} data-animate="slide-left">
           <div className={styles.verticalTextWrapper}>
             <div className={styles.verticalText}>
               一皿に込めた、<br />
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.philosophyRight}>
+        <div className={styles.philosophyRight} data-animate="slide-right">
           <div className={styles.philosophyContent}>
             <span className={styles.philosophyLabel}>Our Philosophy</span>
             <h2 className={styles.philosophyTitle}>
@@ -56,7 +56,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.featureGrid}>
+          <div className={styles.featureGrid} data-animate="stagger-children">
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>
                 <Image src="/icons/heritage.svg" alt="Heritage Icon" width={24} height={24} />
@@ -98,7 +98,7 @@ export default function Home() {
 
       {/* Occasions Section */}
       <section id="scenes" className={styles.occasions}>
-        <div className={styles.occasionsHeader}>
+        <div className={styles.occasionsHeader} data-animate="header">
           <span className={styles.occasionsLabel}>Occasions</span>
           <h2 className={styles.occasionsTitle}>大切なひとときを</h2>
         </div>
@@ -233,7 +233,7 @@ export default function Home() {
 
       {/* Menu Section */}
       <section id="menu" className={styles.menu}>
-        <div className={styles.menuHeader}>
+        <div className={styles.menuHeader} data-animate="header">
           <span className={styles.menuLabel}>Menu</span>
           <h2 className={styles.menuTitle}>四季のコース</h2>
           <p className={styles.menuSubtitle}>
@@ -244,7 +244,7 @@ export default function Home() {
 
         <div className={styles.menuCategories}>
           {/* Lunch Course */}
-          <div className={styles.menuCategory}>
+          <div className={styles.menuCategory} data-animate="fade-up">
             <div className={styles.menuCategoryHeader}>
               <span className={styles.menuCategoryIcon}>◇</span>
               <h3 className={styles.menuCategoryTitle}>Lunch Course</h3>
@@ -286,7 +286,7 @@ export default function Home() {
           </div>
 
           {/* Dinner Course */}
-          <div className={`${styles.menuCategory} ${styles.menuCategoryFeatured}`}>
+          <div className={`${styles.menuCategory} ${styles.menuCategoryFeatured}`} data-animate="fade-up">
             <div className={styles.menuCategoryBadge}>Chef&apos;s Recommend</div>
             <div className={styles.menuCategoryHeader}>
               <span className={styles.menuCategoryIcon}>◇</span>
@@ -335,7 +335,7 @@ export default function Home() {
           </div>
 
           {/* Seasonal Course */}
-          <div className={styles.menuCategory}>
+          <div className={styles.menuCategory} data-animate="fade-up">
             <div className={styles.menuCategoryHeader}>
               <span className={styles.menuCategoryIcon}>◇</span>
               <h3 className={styles.menuCategoryTitle}>Seasonal Special</h3>
@@ -383,7 +383,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.menuGallery}>
+        <div className={styles.menuGallery} data-animate="stagger-children">
           <div className={styles.menuGalleryItem}>
             <Image
               src="/images/menu/1.jpeg"
@@ -435,7 +435,7 @@ export default function Home() {
 
       {/* Wedding Plan Section */}
       <section id="wedding" className={styles.wedding}>
-        <div className={styles.weddingHeader}>
+        <div className={styles.weddingHeader} data-animate="header">
           <span className={styles.weddingLabel}>Wedding Plan</span>
           <h2 className={styles.weddingTitle}>永遠の誓いを、歴史ある館で</h2>
           <p className={styles.weddingSubtitle}>
@@ -444,7 +444,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className={styles.weddingPlans}>
+        <div className={styles.weddingPlans} data-animate="stagger-children">
           {/* Plan 1 */}
           <div className={styles.weddingPlan}>
             <div className={styles.weddingPlanBadge}>人気No.1</div>
@@ -518,12 +518,12 @@ export default function Home() {
 
       {/* Blog / News Section */}
       <section className={styles.blog}>
-        <div className={styles.blogHeader}>
+        <div className={styles.blogHeader} data-animate="header">
           <span className={styles.blogLabel}>Blog &amp; News</span>
           <h2 className={styles.blogTitle}>お知らせ</h2>
         </div>
 
-        <div className={styles.blogGrid}>
+        <div className={styles.blogGrid} data-animate="stagger-children">
           {/* Blog Post 1 */}
           <article className={styles.blogCard}>
             <div className={styles.blogCardDate}>
@@ -606,14 +606,14 @@ export default function Home() {
 
       {/* Location Section */}
       <section id="access" className={styles.location}>
-        <div className={styles.locationHeader}>
+        <div className={styles.locationHeader} data-animate="header">
           <span className={styles.locationLabel}>Location</span>
           <h2 className={styles.locationTitle}>アクセス</h2>
         </div>
 
         <div className={styles.locationContent}>
           {/* Left - Info */}
-          <div className={styles.locationInfo}>
+          <div className={styles.locationInfo} data-animate="slide-left">
             <div className={styles.locationName}>
               <Image
                 src="/logo.svg"
@@ -664,7 +664,7 @@ export default function Home() {
           </div>
 
           {/* Right - Map */}
-          <div className={styles.locationMap}>
+          <div className={styles.locationMap} data-animate="slide-right">
             <div
               className={styles.locationMapImage}
               style={{
