@@ -704,3 +704,639 @@
     transform: translateX(4px);
   }
 }
+
+// Wedding Plan Section
+.wedding {
+  width: 100%;
+  background-color: #1a2332;
+  padding: 6rem 1rem;
+  color: white;
+
+  @media (min-width: 768px) {
+    padding: 8rem 2rem;
+  }
+}
+
+.weddingHeader {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.weddingLabel {
+  font-family: var(--font-geist-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d4a411;
+}
+
+.weddingTitle {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+
+  @media (min-width: 768px) {
+    font-size: 2.75rem;
+  }
+}
+
+.weddingSubtitle {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 300;
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
+}
+
+.weddingPlans {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 2rem;
+  }
+}
+
+.weddingPlan {
+  position: relative;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(212, 164, 17, 0.2);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(212, 164, 17, 0.5);
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+}
+
+.weddingPlanBadge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1a2332;
+  background-color: #d4a411;
+  border-radius: 2rem;
+  white-space: nowrap;
+}
+
+.weddingPlanIcon {
+  font-size: 1rem;
+  color: #d4a411;
+  margin-bottom: 0.75rem;
+}
+
+.weddingPlanName {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.weddingPlanPrice {
+  margin-top: 0.5rem;
+  font-family: var(--font-geist-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #d4a411;
+
+  span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.weddingPlanDivider {
+  width: 3rem;
+  height: 1px;
+  background-color: rgba(212, 164, 17, 0.4);
+  margin: 1.5rem auto;
+}
+
+.weddingPlanFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: left;
+
+  li {
+    padding: 0.625rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 1rem;
+    position: relative;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #d4a411;
+      font-size: 0.75rem;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.weddingPlanButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #d4a411;
+  background-color: transparent;
+  border: 1px solid #d4a411;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #d4a411;
+    color: #1a2332;
+  }
+
+  span {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover span {
+    transform: translateX(4px);
+  }
+}
+
+.weddingFooter {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.weddingNote {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 300;
+}
+
+.weddingContactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #1a2332;
+  background-color: #d4a411;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #e0b52e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(212, 164, 17, 0.3);
+  }
+
+  span {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover span {
+    transform: translateX(4px);
+  }
+}
+
+// Blog / News Section
+.blog {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 6rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 8rem 2rem;
+  }
+}
+
+.blogHeader {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.blogLabel {
+  font-family: var(--font-geist-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #9c7447;
+}
+
+.blogTitle {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a2332;
+
+  @media (min-width: 768px) {
+    font-size: 2.75rem;
+  }
+}
+
+.blogGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.blogCard {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid rgba(156, 116, 71, 0.1);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-color: rgba(212, 164, 17, 0.3);
+  }
+}
+
+.blogCardReservation {
+  border-color: rgba(212, 164, 17, 0.3);
+  background: linear-gradient(135deg, rgba(212, 164, 17, 0.03) 0%, #fff 100%);
+}
+
+.blogCardDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 3.5rem;
+  padding-top: 0.25rem;
+}
+
+.blogDay {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2332;
+  line-height: 1;
+}
+
+.blogMonth {
+  font-family: var(--font-geist-sans);
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.blogCardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blogTag {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.15rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #9c7447;
+  background-color: rgba(156, 116, 71, 0.08);
+  border-radius: 2rem;
+}
+
+.blogCardTitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a2332;
+}
+
+.blogCardExcerpt {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+}
+
+.blogReadMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9c7447;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #d4a411;
+
+    span {
+      transform: translateX(4px);
+    }
+  }
+
+  span {
+    transition: transform 0.3s ease;
+  }
+}
+
+.blogFooter {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.blogButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #1a2332;
+  background-color: transparent;
+  border: 1.5px solid #1a2332;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #1a2332;
+    color: #fff;
+  }
+
+  span {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover span {
+    transform: translateX(4px);
+  }
+}
+
+// Location Section
+.location {
+  width: 100%;
+  background-color: #fff;
+  padding: 6rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 8rem 2rem;
+  }
+}
+
+.locationHeader {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.locationLabel {
+  font-family: var(--font-geist-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #9c7447;
+}
+
+.locationTitle {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a2332;
+
+  @media (min-width: 768px) {
+    font-size: 2.75rem;
+  }
+}
+
+.locationContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 4rem;
+    align-items: stretch;
+  }
+}
+
+.locationInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.locationName {
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a2332;
+    letter-spacing: 0.02em;
+  }
+}
+
+.locationNameJp {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.locationDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.locationDetailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  p, a {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.locationDetailLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9c7447;
+}
+
+.locationPhone {
+  font-family: var(--font-display);
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  color: #1a2332 !important;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #d4a411 !important;
+  }
+}
+
+.locationHours,
+.locationAccess {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.locationReserveButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  padding: 0.875rem 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background-color: #1a2332;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #2a3a52;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 35, 50, 0.3);
+  }
+
+  span {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover span {
+    transform: translateX(4px);
+  }
+}
+
+.locationMap {
+  flex: 1;
+  min-height: 400px;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(156, 116, 71, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  @media (min-width: 1024px) {
+    min-height: 500px;
+  }
+}
+
+.locationMapImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.locationMapOverlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(250, 245, 235, 0.2);
+  backdrop-filter: contrast(0.75);
+}
+
+.locationMapButton {
+  padding: 0.875rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a2332;
+  background-color: #fff;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

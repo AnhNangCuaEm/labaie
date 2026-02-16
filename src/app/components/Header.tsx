@@ -32,10 +32,10 @@ export default function Header() {
             <Image src="/logo.svg" alt="Logo" width={250} height={50} className={styles.logo} />
             <nav className={styles.nav}>
                 <ul className={styles.navList}>
-                    <li><a href="#" className={styles.navLink}>Concept</a></li>
-                    <li><a href="#" className={styles.navLink}>Menu</a></li>
-                    <li><a href="#" className={styles.navLink}>Scenes</a></li>
-                    <li><a href="#" className={styles.navLink}>Access</a></li>
+                    <li><a href="#menu" className={styles.navLink}>Menu</a></li>
+                    <li><a href="#scenes" className={styles.navLink}>Scenes</a></li>
+                    <li><a href="#wedding" className={styles.navLink}>Wedding</a></li>
+                    <li><a href="#access" className={styles.navLink}>Access</a></li>
                 </ul>
             </nav>
             <button 
