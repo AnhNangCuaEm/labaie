@@ -62,6 +62,11 @@
   }
 }
 
+.heroLogo {
+  width: clamp(180px, 40vw, 450px) !important;
+  height: auto !important;
+}
+
 .heroTitle {
   font-size: 1.5rem;
   font-weight: medium;

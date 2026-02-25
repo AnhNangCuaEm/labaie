@@ -36,6 +36,11 @@
   }
 }
 
+.logo {
+  width: clamp(150px, 40vw, 250px) !important;
+  height: auto !important;
+}
+
 .nav {
   transition: opacity 0.3s;
 

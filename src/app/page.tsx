@@ -25,6 +25,7 @@ export default function Home() {
               alt="Logo"
               width={450}
               height={200}
+              className={styles.heroLogo}
             />
           </div>
           <h1 className={styles.heroTitle} data-hero="title">時を超えた、和と洋の融合</h1>
