@@ -12,6 +12,45 @@ export default function ScrollAnimations() {
     const timer = setTimeout(() => {
       const ctx = gsap.context(() => {
 
+        // ── Hero Section: luxury entrance animation ──
+        const heroLines = document.querySelectorAll<HTMLElement>('[data-hero="line"]');
+        const heroEst = document.querySelector<HTMLElement>('[data-hero="est"]');
+        const heroLogo = document.querySelector<HTMLElement>('[data-hero="logo"]');
+        const heroTitle = document.querySelector<HTMLElement>('[data-hero="title"]');
+
+        if (heroLogo) {
+          const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+          // HR lines: expand width from 0
+          tl.fromTo(
+            heroLines,
+            { scaleX: 0, opacity: 0 },
+            { scaleX: 1, opacity: 1, duration: 1.0, transformOrigin: "center center", stagger: 0.1 },
+            0
+          )
+          // EST. text: fade + slide up subtly
+          .fromTo(
+            heroEst,
+            { opacity: 0, y: 12, letterSpacing: "0.4em" },
+            { opacity: 1, y: 0, letterSpacing: "0.2em", duration: 1.2 },
+            0.3
+          )
+          // Logo: fade in with gentle scale-up from slightly smaller
+          .fromTo(
+            heroLogo,
+            { opacity: 0, scale: 0.88, filter: "blur(6px)" },
+            { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.6, ease: "power2.out" },
+            0.7
+          )
+          // Title: slide up and fade in last
+          .fromTo(
+            heroTitle,
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
+            1.5
+          );
+        }
+
         // ── Menu Cards: staggered fade-up ──
         gsap.utils.toArray<HTMLElement>('[data-animate="fade-up"]').forEach((el, i) => {
           gsap.fromTo(

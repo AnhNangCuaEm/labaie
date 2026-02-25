@@ -16,16 +16,18 @@ export default function Home() {
           style={{ objectFit: 'cover' }}
         />
         <div className={styles.heroContent}>
-          <div className={styles.heroText}>
-            <hr /><p>EST. 1908 YOKOHAMA</p><hr />
+          <div className={styles.heroText} data-hero="text">
+            <hr data-hero="line" /><p data-hero="est">EST. 1908 YOKOHAMA</p><hr data-hero="line" />
           </div>
-          <Image
-            src="/vertical-logo.svg"
-            alt="Logo"
-            width={450}
-            height={200}
-          />
-          <h1 className={styles.heroTitle}>時を超えた、和と洋の融合</h1>
+          <div data-hero="logo">
+            <Image
+              src="/vertical-logo.svg"
+              alt="Logo"
+              width={450}
+              height={200}
+            />
+          </div>
+          <h1 className={styles.heroTitle} data-hero="title">時を超えた、和と洋の融合</h1>
         </div>
       </section>
 

@@ -5,7 +5,6 @@ import { useCallback, useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import styles from "./header.module.scss";
-import Link from "next/link";
 import { Divide as Hamburger } from 'hamburger-react'
 
 export default function Header() {
@@ -35,7 +34,7 @@ export default function Header() {
         } else {
             document.body.style.overflow = 'unset';
         }
-        
+
         return () => {
             document.body.style.overflow = 'unset';
         };
@@ -52,9 +51,20 @@ export default function Header() {
 
     return (
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
-            <Link href="/">
+            <a
+                href="#"
+                onClick={(e) => {
+                    e.preventDefault();
+                    const smoother = ScrollSmoother.get();
+                    if (smoother) {
+                        smoother.scrollTo(0, true);
+                    } else {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                }}
+            >
                 <Image src="/logo.svg" alt="Logo" width={250} height={50} className={styles.logo} />
-            </Link>
+            </a>
             <nav className={styles.nav}>
                 <ul className={styles.navList}>
                     <li><a href="#scenes" onClick={(e) => handleNavClick(e, "#scenes")} className={styles.navLink}>Scenes</a></li>
@@ -74,8 +84,8 @@ export default function Header() {
 
             {/* Hamburger Button for Mobile */}
             <div className={styles.hamburgerWrapper}>
-                <Hamburger 
-                    toggled={isMenuOpen} 
+                <Hamburger
+                    toggled={isMenuOpen}
                     toggle={setIsMenuOpen}
                     color={isMenuOpen ? "#fff" : (isScrolled ? "#000" : "#fff")}
                     size={24}
@@ -89,8 +99,8 @@ export default function Header() {
                     <nav className={styles.mobileNav}>
                         <ul className={styles.mobileNavList}>
                             <li className={styles.mobileNavItem}>
-                                <a 
-                                    href="#scenes" 
+                                <a
+                                    href="#scenes"
                                     onClick={(e) => handleNavClick(e, "#scenes")}
                                     className={styles.mobileNavLink}
                                 >
@@ -98,8 +108,8 @@ export default function Header() {
                                 </a>
                             </li>
                             <li className={styles.mobileNavItem}>
-                                <a 
-                                    href="#menu" 
+                                <a
+                                    href="#menu"
                                     onClick={(e) => handleNavClick(e, "#menu")}
                                     className={styles.mobileNavLink}
                                 >
@@ -107,8 +117,8 @@ export default function Header() {
                                 </a>
                             </li>
                             <li className={styles.mobileNavItem}>
-                                <a 
-                                    href="#wedding" 
+                                <a
+                                    href="#wedding"
                                     onClick={(e) => handleNavClick(e, "#wedding")}
                                     className={styles.mobileNavLink}
                                 >
@@ -116,8 +126,8 @@ export default function Header() {
                                 </a>
                             </li>
                             <li className={styles.mobileNavItem}>
-                                <a 
-                                    href="#access" 
+                                <a
+                                    href="#access"
                                     onClick={(e) => handleNavClick(e, "#access")}
                                     className={styles.mobileNavLink}
                                 >
@@ -126,7 +136,7 @@ export default function Header() {
                             </li>
                         </ul>
                     </nav>
-                    
+
                     <button
                         className={styles.mobileReserveButton}
                         onClick={() => setIsMenuOpen(false)}
@@ -139,7 +149,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            
+
         </header>
     );
 }
